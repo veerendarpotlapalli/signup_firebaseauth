@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this, otp_verify.class);
                             intent.putExtra("mobile",n);
                             startActivity(intent);
+                            //phone.setText("");
                         } //else
                     }catch (Exception e){
                         e.getMessage();
