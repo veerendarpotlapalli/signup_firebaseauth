@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Signup_firebaseauth">
         <activity
+            android:name=".logout"
+            android:exported="false" />
+        <activity
+            android:name=".otp_verify"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
