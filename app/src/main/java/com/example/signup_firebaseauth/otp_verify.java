@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 public class otp_verify extends AppCompatActivity {
 
-    EditText enterotp;
+    EditText enterotp;  // always try to keep variable name similar to id
     Button verify;
     String phoneNumber;
     FirebaseAuth mAuth;
@@ -43,7 +43,7 @@ public class otp_verify extends AppCompatActivity {
             phoneNumber = getIntent().getStringExtra("mobile");
             mAuth = FirebaseAuth.getInstance();
 
-            initiateotp();
+            initiateotp();  // otp verification process (firstly otp os verifing)
 
             verify.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -56,7 +56,7 @@ public class otp_verify extends AppCompatActivity {
 
                     else {
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(otpid, enterotp.getText().toString());
-                        signInWithPhoneAuthCredential(credential);
+                        signInWithPhoneAuthCredential(credential);  // after onclick verify otp and after successfully execution of initiateotp()
                     }
                 } //verfy on
             });
@@ -65,7 +65,7 @@ public class otp_verify extends AppCompatActivity {
         } //catch
     } //oncreate
 
-    private void initiateotp()
+    private void initiateotp()  // this is the process before onclick verifyotp,after onclick get otp
     {
         try {
             PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -97,7 +97,7 @@ public class otp_verify extends AppCompatActivity {
         } //catch
     } //initiateotp
 
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {  // lastly going to another activity
         try {
             mAuth.signInWithCredential(credential)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -108,6 +108,7 @@ public class otp_verify extends AppCompatActivity {
                             } else {
                                 Toast.makeText(getApplicationContext(), "signup code error", Toast.LENGTH_SHORT).show();
                             }
+                            // enterotp.setText("");
                         }
                     }); //addOnCompleteListener
         }catch(Exception e){
