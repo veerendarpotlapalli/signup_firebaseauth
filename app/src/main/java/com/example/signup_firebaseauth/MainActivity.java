@@ -34,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
                         phone.setError("phone number required");
                         }
                         else if (phone.getText().toString().length() != 13) {
-                        phone.setError("Mobile number must be 10 digits");
+                        phone.setError("Enter Mobile Number");
                         }
                         else {
                             String n = phone.getText().toString();
                             Intent intent = new Intent(MainActivity.this, otp_verify.class);
                             intent.putExtra("mobile",n);
                             startActivity(intent);
-                            //phone.setText("");
+                            phone.setText("+91");
                         } //else
                     }catch (Exception e){
                         e.getMessage();

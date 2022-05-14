@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_logout.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_otp_verify.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/drawable/button.xml" value="0.108" />
+        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_logout.xml" value="0.18" />
+        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/bhagy/signup_firebaseauth/app/src/main/res/layout/activity_otp_verify.xml" value="0.18" />
       </map>
     </option>
   </component>

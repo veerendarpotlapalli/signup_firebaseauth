@@ -57,6 +57,7 @@ public class otp_verify extends AppCompatActivity {
                     else {
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(otpid, enterotp.getText().toString());
                         signInWithPhoneAuthCredential(credential);  // after onclick verify otp and after successfully execution of initiateotp()
+                        finish();
                     }
                 } //verfy on
             });
@@ -107,13 +108,15 @@ public class otp_verify extends AppCompatActivity {
                                 startActivity(new Intent(otp_verify.this, logout.class));
                             } else {
                                 Toast.makeText(getApplicationContext(), "signup code error", Toast.LENGTH_SHORT).show();
+                                enterotp.setText("");
                             }
-                            // enterotp.setText("");
+
                         }
                     }); //addOnCompleteListener
         }catch(Exception e){
 
         }
         } //signInWithPhoneAuthCredential
+
 
 } //main

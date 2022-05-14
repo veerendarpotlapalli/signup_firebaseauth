@@ -8,9 +8,10 @@
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="188dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="360dp"
+        android:background="@drawable/button"
         android:gravity="center"
         android:text="LOG OUT"
         android:textColor="@color/white"
